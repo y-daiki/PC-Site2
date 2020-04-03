@@ -1,0 +1,56 @@
+<% var title = "TOP"; var description = "トップのdescription"; %> <% include
+src/ejs/template/_head %>
+
+<% include src/ejs/template/_header %>
+<main class="l-main">
+  <div class="c-main__container">
+    <nav class="c-sidemenu">
+      <div class="c-sidemenu__container">
+        <ul class="c-sidemenu__container--bg">
+          <% for (var i = 0; i < 12; i++) { %>
+          <li class="c-sidemenu__box">
+            <img class="c-sidemenu__item" src="./assets/images/sidemenu/icon/spr_gnav_pc_<%= 2*i+1 %>.png" alt="サイドメニューアイコン">
+          </li>
+          <% } %>
+        </ul>
+      </div>
+      <div class="c-sidemenu__sns">
+        <div class="c-sidemenu__twitter"></div>
+        <div class="c-sidemenu__facebook"></div>
+      </div>
+    </nav>
+    <div class="p-home-mainmenu">
+      <% var mainmenuDescription= [
+      'グッピーズは、人材採用をITで革新し続ける企業です。',
+      'グッピーズが提供するOnly Oneサービスをご紹介いたします。',
+      'グッピーズの最新ニュース、プレスリリースです。',
+      'グッピーズではNO.1を目指す環境が整っています。',
+      '様々な情報をFacebookで発信しています。',
+      'サービスに関するお問い合わせはこちらから。',
+      '医療。歯科・介護に特化した、日本で最初のNo.1求人サイト。',
+      '医療。歯科・介護の資格を目指す学生の為の就職サイト。',
+      '人材募集でもっとも利用されているサービスのご利用はこちら。',
+      'グッピーの無料転職相談は、無料以上の価値があります。',
+      '医療のアルバイト探しは、スマホ対応のDr.スポットで簡単検索。',
+      'ソーシャルリクルティングはFacebookアプリ・Jinzで始めよう。',
+      ]; %>
+      <% for (var i = 0; i < 12; i++) { %>
+      <div class="p-home-mainmenu__box">
+        <% if(i < 7) { %>
+          <img class="p-home-mainmenu__heading" src="./assets/images/mainmenu/menu/spr_top01_<%= i+1 %>.png" alt="メインメニュー見出し">
+        <% } %>
+        <% if(i >=7) { %>
+          <img class="p-home-mainmenu__heading" src="./assets/images/mainmenu/menu/spr_top01_7.png" alt="メインメニュー見出し">
+        <% } %>
+        <div class="p-home-mainmenu__icon--box">
+            <img class="p-home-mainmenu__icon" src="./assets/images/mainmenu/icon/spr_top01_<%= i+1 %>.png" alt="メインメニューアイコン" onmouseover="this.src='./assets/images/sidemenu/icon/spr_gnav_pc_<%= 2*i+1 %>.png'" onmouseout="this.src='./assets/images/mainmenu/icon/spr_top01_<%= i+1 %>.png'">
+            <!-- <div class="p-home-mainmenu__icon<%= i+1 %>"></div> -->
+        </div>
+        <img class="p-home-mainmenu__subheading" src="./assets/images/mainmenu/menu2/spr_top01_<%= i+1 %>.png" alt="メインメニューサブ見出し">
+        <div class="p-home-mainmenu__description"><%- mainmenuDescription[i] %></div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</main>
+<% include src/ejs/template/_footer %>

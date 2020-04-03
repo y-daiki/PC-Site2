@@ -1,0 +1,48 @@
+.c-sidemenu__container {
+  border: double $colorWhite;
+  background-color: $colorOrange;
+  width: 200px;
+
+  .c-sidemenu__container--bg {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: $colorWhite;
+
+    .c-sidemenu__box {
+      width: 64px;
+      height: 65px;
+      background-color: $colorOrange;
+
+      &:hover {
+        background-color: $sidemenuHoverColor;
+      }
+
+      &:nth-child(n + 4) {
+        margin-top: 1px;
+      }
+    }
+  }
+}
+
+.c-sidemenu__sns {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 60px;
+  width: 200px;
+  height: 100px;
+
+  .c-sidemenu__twitter {
+    background-image: url('#{$bgPath}icon/twitter.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+  }
+
+  .c-sidemenu__facebook {
+    background-image: url('#{$bgPath}icon/facebook.png');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+  }
+}

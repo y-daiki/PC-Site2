@@ -1,0 +1,65 @@
+.p-home-mainmenu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 10px;
+
+  .p-home-mainmenu__box {
+    position: relative;
+    width: 193px;
+    height: 193px;
+    border: solid 1px #ccc;
+    background-color: $colorWhite;
+
+    &:hover {
+      background-color: $mainmenuHoverColor;
+
+      // @for $i from 1 through 12 {
+      //   .p-home-mainmenu__icon#{$i} {
+      //     background-image: url('#{$bgPath}sidemenu/icon/spr_gnav_pc_#{$i * 2 - 1}.png');
+      //   }
+      // }
+    }
+
+    &:nth-child(n + 4) {
+      margin-top: 10px;
+    }
+
+    .p-home-mainmenu__heading {
+      width: auto;
+    }
+
+    .p-home-mainmenu__icon--box {
+      padding: 10px 0;
+      text-align: center;
+
+      .p-home-mainmenu__icon {
+        width: 70px;
+      }
+
+      // @for $i from 1 through 12 {
+      //   .p-home-mainmenu__icon#{$i} {
+      //     margin: auto;
+      //     width: 70px;
+      //     height: 50px;
+      //     background-image: url('#{$bgPath}mainmenu/icon/spr_top01_#{$i}.png');
+      //     background-size: contain;
+      //   }
+      // }
+    }
+
+    .p-home-mainmenu__subheading {
+      position: absolute;
+      top: 120px;
+      padding: 0 10px;
+      width: auto;
+    }
+
+    .p-home-mainmenu__description {
+      position: absolute;
+      top: 150px;
+      padding: 0 10px;
+      font-size: 8px;
+    }
+  }
+}

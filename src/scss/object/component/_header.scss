@@ -1,0 +1,28 @@
+.c-header__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  max-width: 810px;
+  margin: auto;
+
+  .c-header__logo--box {
+    padding: 48px;
+    background-color: $colorOrange;
+    border: double $colorWhite;
+
+    .c-header__logo--item {
+      width: 100px;
+      height: 100px;
+      background-image: url('#{$bgPath}logo/logo1.png');
+      background-size: cover;
+    }
+  }
+
+  .c-header__cover {
+    width: 600px;
+    height: 200px;
+    background-image: url('#{$bgPath}logo/top.png');
+    background-size: cover;
+  }
+}
